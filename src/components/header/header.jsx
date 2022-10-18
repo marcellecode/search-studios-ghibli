@@ -1,9 +1,10 @@
-import logo from '../../logo.svg';
+// import logo from '../../logo.svg';
+import './header.css';
 
 const Header = () => {
     return(
-        <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <header className="header-container">
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
