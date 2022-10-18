@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import Header from "./components/header/header";
+import Rotas from "./routes";
 
 function App() {
   const [filmsList, setFilmsList] = useState();
@@ -20,7 +20,7 @@ function App() {
   console.log(filmsList);  
   return (
     <div className="App"> 
-      <Header />
+      <Rotas />
     </div>
   );
 }

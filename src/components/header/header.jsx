@@ -2,6 +2,7 @@ import "./header.css";
 import logo from "../../general/images/Studio_Ghibli_logo.png";
 import { FaBars } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -22,35 +23,17 @@ const Header = () => {
     <header className="header-container">
       <img src={logo} className="header-logo" alt="Studios Ghibli Logo" />
       <div id="menu" className="header-container__menu-content">
-        <a
-          className="header-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link className="header-link" to="/">
           Filmes
-        </a>
-        <a
-          className="header-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </Link>
+        <Link className="header-link" to="/atores">
           Atores
-        </a>
-        <a
-          className="header-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </Link>
+        <Link className="header-link" to="/locais">
           Locais
-        </a>
+        </Link>
       </div>
-      <button
-        className="hamburguer-icon"
-        onClick={() => setOpen(!isOpen)}
-      >
+      <button className="hamburguer-icon" onClick={() => setOpen(!isOpen)}>
         <FaBars />
       </button>
     </header>

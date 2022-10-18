@@ -54,7 +54,7 @@
         left: 0;
         flex-direction: column;
         width: 100%;
-        height: calc(100vh - 507px);
+        height: calc(100vh - 805px);
         background-color: var(--background-header);
         /* border-top: 1px solid black; */
         text-align: center;
