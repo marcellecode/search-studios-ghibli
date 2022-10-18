@@ -4,10 +4,10 @@ import { FaBars } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 const Header = () => {
-  const [menuStatus, setMenuStatus] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
-    if (menuStatus) {
+    if (isOpen) {
       document
         .getElementsByClassName("header-container__menu-content")[0]
         .classList.add("expanded");
@@ -49,7 +49,7 @@ const Header = () => {
       </div>
       <button
         className="hamburguer-icon"
-        onClick={() => setMenuStatus(!menuStatus)}
+        onClick={() => setOpen(!isOpen)}
       >
         <FaBars />
       </button>
