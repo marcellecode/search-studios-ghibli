@@ -53,7 +53,7 @@
         left: 0;
         flex-direction: column;
         width: 100%;
-        height: calc(100vh - 805px);
+        height: calc(100vh - 685px);
         background-color: var(--background-header);
         text-align: center;
     }
