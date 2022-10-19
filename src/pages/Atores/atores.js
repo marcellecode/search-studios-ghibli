@@ -1,14 +1,14 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../components/header/header";
 import InputField from "../../components/input-field/input-field";
-
+import './atores.css'
 const Atores = () => {
   const [filter, setFilter] = useState("");
   const [filterList, setFilterList] = useState([]);
 
   const getInputFromComponent = (data) => {
     setFilter(data.toLowerCase());
-};
+  };
 
   useEffect(() => {
     fetch("https://ghibliapi.herokuapp.com/people")
@@ -25,9 +25,10 @@ const Atores = () => {
     <>
       <Header />
       <InputField getInputFromComponent={getInputFromComponent} />
-      <button>Search</button>
       {filterList.map((item) => (
-        <h1 key={item.id}>{item.name}</h1>
+        <div className="atores-container">
+            <h3 key={item.id}>{item.name}</h3>
+        </div>
       ))}
     </>
   );

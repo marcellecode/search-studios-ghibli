@@ -1,0 +1,9 @@
+.locais-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.locais-container > * {
+    margin-bottom: 5px;
+}

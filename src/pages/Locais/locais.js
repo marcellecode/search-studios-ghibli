@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Header from "../../components/header/header";
 import InputField from "../../components/input-field/input-field";
+import './locais.css';
 
 const Locais = () => {
   const [filter, setFilter] = useState("");
@@ -25,9 +26,10 @@ const Locais = () => {
     <>
       <Header />
       <InputField getInputFromComponent={getInputFromComponent} />
-      <button>Search</button>
       {filterList.map((item) => (
-        <h1 key={item.id}>{item.name}</h1>
+        <div className="locais-container">
+            <h3 key={item.id}>{item.name}</h3>
+        </div>
       ))}
     </>
   );

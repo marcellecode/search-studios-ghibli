@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../components/header/header";
 import InputField from "../../components/input-field/input-field";
+import Card from "../../components/card/card";
+import "./filmes.css";
 
 const Filmes = () => {
   const [filter, setFilter] = useState("");
@@ -25,10 +27,17 @@ const Filmes = () => {
     <>
       <Header />
       <InputField getInputFromComponent={getInputFromComponent} />
-      <button>Search</button>
-      {filterList.map((item) => (
-        <h1 key={item.id}>{item.title}</h1>
-      ))}
+        
+      <div className="films-container">
+        {filterList.map((item) => (
+          <Card
+            key={item.id}
+            urlImage={item.movie_banner}
+            title={item.title}
+            description={item.description}
+          />
+        ))}
+      </div>
     </>
   );
 };

@@ -1,0 +1,12 @@
+.films-container {
+    margin: 10px;
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.films-container>.card-container {
+    margin: 15px;
+}

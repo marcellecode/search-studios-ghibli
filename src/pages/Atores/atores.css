@@ -1,0 +1,9 @@
+.atores-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.atores-container > * {
+    margin-bottom: 5px;
+}
