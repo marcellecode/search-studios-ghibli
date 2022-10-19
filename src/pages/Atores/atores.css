@@ -2,8 +2,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .atores-container > * {
     margin-bottom: 5px;
 }
+

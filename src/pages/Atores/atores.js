@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../components/header/header";
 import InputField from "../../components/input-field/input-field";
-import './atores.css'
+import "./atores.css";
+import Card from "../../components/card/card";
+
 const Atores = () => {
   const [filter, setFilter] = useState("");
   const [filterList, setFilterList] = useState([]);
@@ -27,7 +29,11 @@ const Atores = () => {
       <InputField getInputFromComponent={getInputFromComponent} />
       {filterList.map((item) => (
         <div className="atores-container">
-            <h3 key={item.id}>{item.name}</h3>
+          <Card
+            key={item.id}
+            title={item.name}
+            description={item.gender}
+          />
         </div>
       ))}
     </>
